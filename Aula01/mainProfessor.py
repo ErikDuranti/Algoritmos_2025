@@ -13,5 +13,11 @@ class Carro:
         if km > self._kilometragem:
             self.__kilometragem = km
             
+    def __str__(self):
+        txt = "Modelo: " + self.modelo
+        txt += "\nAno: " + self.ano
+        txt += "\nKilometragem: " + str(self.__kilometragem)
+        return txt
+            
 x = Carrp("Doblo", 2025)
 print (x)
