@@ -18,6 +18,9 @@ class Carro:
         txt += "\nAno: " + self.ano
         txt += "\nKilometragem: " + str(self.__kilometragem)
         return txt
+    
+    def imprimir(self):
+        print(self)
             
 x = Carrp("Doblo", 2025)
 print (x)
