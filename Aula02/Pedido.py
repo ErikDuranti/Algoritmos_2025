@@ -1,9 +1,10 @@
 from Pessoa import Pessoa
 from Cidade import Cidade
 from Produto import Produto
+from datetime import date
 
 class Pedido:
-    def __init__(self, data, cliente = Pessoa("Fulano")):
+    def __init__(self, data = date.today(), cliente = Pessoa("Fulano")):
         self.id = None
         self.data = data
         self.cliente = cliente
@@ -24,5 +25,6 @@ class Pedido:
         txt += "\nProdutos: "
         for p in self.produtos:
             txt += "\n" + str(p)
-            txt += "-------------------------------------"
+            txt += "\n-------------------------------------\n"
         txt += "\nPedido: " + str(self.id)
+        return txt
